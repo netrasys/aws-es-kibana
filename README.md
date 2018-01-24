@@ -42,6 +42,11 @@ Build the image
 Run the container (do not forget to pass the required environment variables)
 
 	docker run -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -p 127.0.0.1:9200:9200 aws-es-kibana -b 0.0.0.0 <cluster-endpoint>
+	
+**NETRA SPECIFIC** Publish the container
+
+	docker tag aws-es-kibana netrasys/aws-es-kibana:latest
+	docker push netrasys/aws-es-kibana:latest
 
 ## Credits
 
